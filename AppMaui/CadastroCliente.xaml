@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppMaui.CadastroCliente"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image
+            Margin="15,-10,0,0"
+            HorizontalOptions="StartAndExpand"
+            Source="logo.png"
+            WidthRequest="150" />
+        <BoxView
+            Margin="0,10"
+            BackgroundColor="LightGray"
+            HeightRequest="1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="EndAndExpand" />
+
+        <Label
+            Grid.Row="1"
+            FontAttributes="Bold"
+            FontFamily="Roboto"
+            FontSize="18"
+            HorizontalOptions="CenterAndExpand"
+            Text="Novo Cliente"
+            TextColor="#333"
+            VerticalOptions="CenterAndExpand" />
+
+        <StackLayout
+            Grid.Row="2"
+            Margin="25,0"
+            Orientation="Vertical"
+            Spacing="5">
+            <Label
+                FontAttributes="Bold"
+                FontFamily="Roboto"
+                FontSize="14"
+                Text="Nome"
+                TextColor="#333"
+                VerticalOptions="Start" />
+            <Frame
+                Margin="0"
+                Padding="2,0"
+                BackgroundColor="Transparent"
+                BorderColor="#F8F8F8"
+                CornerRadius="0"
+                HorizontalOptions="FillAndExpand">
+                <Entry
+                    TextColor="#333"
+                    x:Name="txbNome"
+                    FontFamily="Roboto"
+                    FontSize="12"
+                    HorizontalOptions="FillAndExpand" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="3"
+            Margin="25,0"
+            Orientation="Vertical"
+            Spacing="5">
+            <Label
+                FontAttributes="Bold"
+                FontFamily="Roboto"
+                FontSize="14"
+                Text="Código da cor (HEX)"
+                TextColor="#333"
+                VerticalOptions="Start" />
+            <Frame
+                Margin="0"
+                Padding="2,0"
+                BackgroundColor="Transparent"
+                BorderColor="#F8F8F8"
+                CornerRadius="0"
+                HorizontalOptions="FillAndExpand">
+                <Entry
+                    TextColor="#333"
+                    x:Name="txbCodigo"
+                    FontFamily="Roboto"
+                    FontSize="12"
+                    HorizontalOptions="FillAndExpand" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="4"
+            Margin="25,0"
+            Orientation="Vertical"
+            Spacing="5">
+            <Label
+                FontAttributes="Bold"
+                FontFamily="Roboto"
+                FontSize="14"
+                Text="Nome fantasia"
+                TextColor="#333"
+                VerticalOptions="Start" />
+            <Frame
+                Margin="0"
+                Padding="2,0"
+                BackgroundColor="Transparent"
+                BorderColor="#F8F8F8"
+                CornerRadius="0"
+                HorizontalOptions="FillAndExpand">
+                <Entry
+                    TextColor="#333"
+                    x:Name="txbFantasia"
+                    FontFamily="Roboto"
+                    FontSize="12"
+                    HorizontalOptions="FillAndExpand" />
+            </Frame>
+        </StackLayout>
+
+
+        <Button
+            x:Name="addCliente"
+            Grid.Row="5"
+            Margin="25"
+            Padding="0"
+            BackgroundColor="#14C672"
+            Clicked="addCliente_Clicked"
+            CornerRadius="8"
+            FontAttributes="Bold"
+            FontSize="14"
+            HeightRequest="45"
+            HorizontalOptions="FillAndExpand"
+            Text="SALVAR"
+            TextColor="White"
+            VerticalOptions="EndAndExpand" />
+    </Grid>
+</ContentPage>
